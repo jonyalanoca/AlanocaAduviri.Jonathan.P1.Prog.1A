@@ -1,0 +1,19 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+float aplicarAumento(int precio);
+int main(void) {
+	setbuf(stdout,NULL);
+
+	printf("%.2f",aplicarAumento(100));
+	return EXIT_SUCCESS;
+}
+float aplicarAumento(int precio){
+	float total;
+	if(precio<=0){
+		total=precio;
+	}else{
+		total=precio+(precio*5/100);
+	}
+	return total;
+}
